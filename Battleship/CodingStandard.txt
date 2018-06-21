@@ -1,0 +1,202 @@
+//
+//	Bachelor of Software Engineering
+//	Media Design School
+//	Auckland
+//	New Zealand
+//
+//	(c) 2018	Media Design School
+//
+//	File Name	:	CodingStandard.txt
+//	Description	:	Notes on the coding standards and naming conventions enforced
+//					in the C++ code of this solution of projects.
+//	Project		:	Battleship.sln (including Battleship, Consolate, ConsolateTests)
+//	Author		:	Elijah Shadbolt
+//	Mail		:	elijah.sha7979@mediadesign.school.nz
+//				-	elijah.shadbolt@mediadesignschool.com
+//				-	cresspresso@gmail.com
+//
+
+Include Guards: __UPPER_CASE__
+e.g. for a header file called `FileName.hpp`
+
+	#ifndef __FILE_NAME_HPP__
+	#define __FILE_NAME_HPP__
+	...
+	#endif //~ __FILE_NAME_HPP__
+
+	
+
+Macros: UPPER_CASE
+
+	#define MAX_INDEX 100
+	#define TWICE(_X) ((_X) * 2)
+
+
+
+Constants (global, static, or constexpr):
+either UPPER_CASE or Hungarian Notation (see below).
+
+	const int CELL_HEIGHT = 4;
+	static int s_ikCellWidth = 3;
+	static long CELL_DEPTH = 2;
+	constexpr double PI = 3.14;
+	const std::string g_strkName = "Fancy";
+
+Other const-qualified variables should be Hungarian Notation, especially
+locally scoped const variables that use parameters in their definition.
+
+
+
+Preprocessor IF Statements:
+
+	#ifdef NAME
+		...
+	#else //! NAME
+		...
+	#endif //~ NAME
+
+
+
+Enum Members: UPPER_CASE
+Prepended with enum name.
+Also include invalid value and max value, unless obvious.
+
+	enum EFruit
+	{
+		INVALID_FRUIT = 0,
+		FRUIT_APPLE = 1,
+		FRUIT_ORANGE,
+		FRUIT_BANANA,
+		MAX_FRUIT
+	};
+	
+
+
+Namespaces: lowercase
+
+	namespace name
+	{
+		...
+
+	} //~ name
+
+
+
+Functions: PascalCase
+
+	void Foo();
+	int FindIndexOf(const int& _rikElement);
+	int GetSize() const;
+
+
+
+Variables: PascalCase with Hungarian Notation Prefixes.
+
+	int iMyFavouriteNumber;
+
+
+
+Hungarian Notation Prefixes:
+
+Prefix	Description					Example(s)
+b		bool						bool bName
+i		int							int iName
+s		short						short sName
+l		long						long lName
+f		float						float fName
+d		double						double dName
+t		type						PanelStyle tName
+		(typedef, using alias,
+		class, struct)
+v		COORD,						COORD vName
+		2D/3D vector-like struct
+h		HANDLE						HANDLE hStdout
+str		string, wstring				std::string strName
+fn		std::function<>,			std::function<void()> fnName
+		function pointer			void(* fnName)(int)
+os		write stream				std::ostream osName
+is		read stream					std::istream isName
+ios		read/write stream			std::iostream iosName
+									std::stringstream iosName
+
+Prefix-Suffix
+k		const qualifier				const int ikName
+k		const ptr qualifier			int* const kpiName
+									const int* const kpikName
+
+Prefix-Prefix
+u		unsigned qualifier			unsigned int uiName
+p		pointer						int* piName
+									std::unique_ptr<int> piName
+									float* kpafName = new float[12];
+r		reference					int& riName
+rr		R-Value reference			int&& rriName
+a		raw array,					int aiName[16]
+		free store array,			int* paiName = new int[16]
+		array of typedef/etc,		COLORREF aName[16]
+		std::vector,				std::vector<int> aiName
+		other array-like struct		std::array<int, 10> aiName
+
+Scope Prefix
+g_		global variable,			int g_iName
+		namespace variable
+		(not const)
+m_		member variable of class	int m_iName
+		or struct
+s_		static variable				static int s_iName
+_		function parameter			void Foo(int _iName);
+									void Foo(const int& _rikName);
+_T		template parameter			template<class _TName>
+									template<int _TiName>
+
+
+
+Types: PascalCase with Hungarian Notation Prefixes.
+
+Prefix	Description		Example(s)				Notes
+T		typedef,		typedef int TName;		Prefer using aliases instead.
+		using alias		using TName = int;
+S		struct			struct SName {};
+C		class			class CName {};
+E		enum			enum EName {};
+
+
+
+Simple Comments:
+
+	// single-line content
+(Note: space between // and content)
+
+	/*
+	* multiline
+	*
+	* content
+	*/
+
+	// multi-
+	// line
+	// content
+	
+
+
+Code Comments (code temporarily commented out):
+
+	//code content
+(Note: no space between // and content)
+
+	/*
+	code
+	content
+	*/
+
+
+
+Preprocessor Comments (to overcome /**/ nesting):
+
+	#ifdef COMMENTED_OUT
+	surrounded
+	content
+	#endif //~ COMMENTED_OUT
+
+
+

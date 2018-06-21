@@ -1,0 +1,149 @@
+//
+//	Bachelor of Software Engineering
+//	Media Design School
+//	Auckland
+//	New Zealand
+//
+//	(c) 2018	Media Design School
+//
+//	File Name	:	FileFormat.txt
+//	Description	:	Notes on the directory structure and basic content
+//					of files in this solution of projects.
+//	Project		:	Battleship.sln (including Battleship, Consolate, ConsolateTests)
+//	Author		:	Elijah Shadbolt
+//	Mail		:	elijah.sha7979@mediadesign.school.nz
+//				-	elijah.shadbolt@mediadesignschool.com
+//				-	cresspresso@gmail.com
+//
+
+File names are PascalCase with lowercase extensions.
+
+
+
+Header Files:
+
+	ClassName.hpp
+
+	Contains only declarations, no implementation.
+
+	The include guard should be `__CLASS_NAME_HPP_`.
+
+	Each file can contain one namespace or nested namespace,
+	or a struct, or a class. Within one such file there can
+	be many typedefs, enums, and macros.
+
+	If any inline functions or templates are declared,
+	the corresponding "ClassName__.hpp" file must also be
+	#included just before the closing Include Guard of
+	this file.
+
+
+
+Source Files:
+
+	ClassName.cpp
+
+	Contains implementation of functions declared in its
+	corresponding Header File.
+
+
+
+Header Source Files:
+
+	ClassName_imp.hpp
+
+	Contains implementation of inline and template functions
+	declared in its corresponding Header File.
+
+	The include guard should be `__CLASS_NAME_IMP_HPP__`.
+
+	This separation from .cpp is necessary, because linking
+	external libraries without including the implementation
+	of template/inline functions means that the template
+	functions cannot be used for unknown types, and the
+	inline functions cannot be compiled inline.
+
+
+
+[[Example Files and Solution Layout for class 'MyClass']]
+
+As seen in the Solution Explorer:
+
+	> SolutionName							(solution, .sln)
+		> ProjectName						(project, .vcxproj)
+			> Header Files					(filter)
+				MyClass.hpp
+			> Header Source Files			(filter)
+				MyClass_imp.hpp
+			> Source Files					(filter)
+				main.cpp
+				MyClass.cpp
+
+
+
+MyClass.hpp:
+
+	// ...file header...
+	#pragma once
+	#ifndef __MY_CLASS_HPP__
+	#define __MY_CLASS_HPP__
+
+	// Declarations
+
+	CMyClass
+	{
+	public:
+
+		// Does stuff.
+		inline int Foo() const;
+		
+		// Does things.
+		int Bar();
+
+	};
+
+	
+
+	// Include Implementation for Inline and Template Functions
+	#include "MyClass_imp.hpp"
+
+	#endif //~ __MY_CLASS_HPP__
+
+
+
+MyClass_imp.hpp:
+
+	// ...file header...
+	#pragma once
+	#ifndef __MY_CLASS_IMP_HPP__
+	#define __MY_CLASS_IMP_HPP__
+
+	// This Include
+	#include "MyClass.hpp"
+
+	// Implementation
+	
+	// Does stuff.
+	inline int CMyClass::Foo() const
+	{
+		return 3;
+	}
+
+	#endif //~ __MY_CLASS_IMP_HPP__
+
+
+
+MyClass.cpp:
+
+	// ...file header...
+
+	// This Include
+	#include "MyClass.hpp"
+
+	// Implementation
+	
+	// Does things.
+	int CMyClass::Bar()
+	{
+		return 3;
+	}

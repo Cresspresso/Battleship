@@ -1,0 +1,4 @@
+TODO
+- DrawTextRect: account for newlines.
+- Outcome checking.
+- Computer's turn.

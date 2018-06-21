@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Source Files">
+      <UniqueIdentifier>{477f8f20-7e48-4f0b-a064-2ed33d2d7ee3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ui">
+      <UniqueIdentifier>{a367c005-4481-43ef-b90c-7a4492e7a285}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Source Files\ui">
+      <UniqueIdentifier>{ce8a534a-db5d-4781-a167-9e60dfd401b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ui">
+      <UniqueIdentifier>{ba2dd748-7c6e-4119-ad1f-e39ef666403d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\general">
+      <UniqueIdentifier>{ac09eb4b-e968-4b21-8a47-687e42317e95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Source Files\general">
+      <UniqueIdentifier>{8d6e3259-d0e6-4f71-9485-8ac826a232f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\general">
+      <UniqueIdentifier>{849ba28a-28bb-49f8-93d0-07709c5afda6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\displayboards">
+      <UniqueIdentifier>{ff7be74b-9198-47b8-9f95-9ff92754858f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Source Files\displayboards">
+      <UniqueIdentifier>{5580bf0a-ba39-4854-aa38-4843bb832648}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\displayboards">
+      <UniqueIdentifier>{36b3da97-44bf-42ce-b21e-46d4563e6bfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\game">
+      <UniqueIdentifier>{338321c4-0e2a-4576-9a68-cbefec616b44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Source Files\game">
+      <UniqueIdentifier>{e889c65e-a70c-4490-a665-acbc3878c0a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\game">
+      <UniqueIdentifier>{0de379fd-8484-4238-bd85-0f998c623a1b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_Button.hpp">
+      <Filter>Header Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_Element.hpp">
+      <Filter>Header Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_View.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_TextRect.hpp">
+      <Filter>Header Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="FixedArray2D.hpp">
+      <Filter>Header Files\general</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>Source Files\general</Filter>
+    </ClCompile>
+    <ClCompile Include="generalmath_imp.hpp">
+      <Filter>Header Source Files\general</Filter>
+    </ClCompile>
+    <ClCompile Include="DisplayBoard.cpp">
+      <Filter>Source Files\displayboards</Filter>
+    </ClCompile>
+    <ClCompile Include="GameplayBoard.cpp">
+      <Filter>Source Files\displayboards</Filter>
+    </ClCompile>
+    <ClCompile Include="PlacementBoard.cpp">
+      <Filter>Source Files\displayboards</Filter>
+    </ClCompile>
+    <ClCompile Include="Collider.cpp">
+      <Filter>Source Files\game</Filter>
+    </ClCompile>
+    <ClCompile Include="GameBoard.cpp">
+      <Filter>Source Files\game</Filter>
+    </ClCompile>
+    <ClCompile Include="Ship.cpp">
+      <Filter>Source Files\game</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector2.hpp">
+      <Filter>Header Files\general</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ui_View.hpp">
+      <Filter>Header Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_View_imp.hpp">
+      <Filter>Header Source Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_Button_imp.hpp">
+      <Filter>Header Source Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_Element_imp.hpp">
+      <Filter>Header Source Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_TextRect_imp.hpp">
+      <Filter>Header Source Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="FixedArray.hpp">
+      <Filter>Header Files\general</Filter>
+    </ClInclude>
+    <ClInclude Include="FixedArray_imp.hpp">
+      <Filter>Header Source Files\general</Filter>
+    </ClInclude>
+    <ClInclude Include="FixedArray2D_imp.hpp">
+      <Filter>Header Source Files\general</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.hpp">
+      <Filter>Header Files\general</Filter>
+    </ClInclude>
+    <ClInclude Include="generalmath.hpp">
+      <Filter>Header Files\general</Filter>
+    </ClInclude>
+    <ClInclude Include="keycodes.hpp">
+      <Filter>Header Files\general</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_Toggle.hpp">
+      <Filter>Header Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_Toggle_imp.hpp">
+      <Filter>Header Source Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="DisplayBoard.hpp">
+      <Filter>Header Files\displayboards</Filter>
+    </ClInclude>
+    <ClInclude Include="GameplayBoard.hpp">
+      <Filter>Header Files\displayboards</Filter>
+    </ClInclude>
+    <ClInclude Include="PlacementBoard.hpp">
+      <Filter>Header Files\displayboards</Filter>
+    </ClInclude>
+    <ClInclude Include="DisplayBoard_imp.hpp">
+      <Filter>Header Source Files\displayboards</Filter>
+    </ClInclude>
+    <ClInclude Include="GameplayBoard_imp.hpp">
+      <Filter>Header Source Files\displayboards</Filter>
+    </ClInclude>
+    <ClInclude Include="PlacementBoard_imp.hpp">
+      <Filter>Header Source Files\displayboards</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider_imp.hpp">
+      <Filter>Header Source Files\game</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2_imp.hpp">
+      <Filter>Header Source Files\general</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider.hpp">
+      <Filter>Header Files\game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameBoard.hpp">
+      <Filter>Header Files\game</Filter>
+    </ClInclude>
+    <ClInclude Include="Ship.hpp">
+      <Filter>Header Files\game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameBoard_imp.hpp">
+      <Filter>Header Source Files\game</Filter>
+    </ClInclude>
+    <ClInclude Include="Health.hpp">
+      <Filter>Header Files\game</Filter>
+    </ClInclude>
+    <ClInclude Include="mydebug.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mymemory.hpp">
+      <Filter>Header Files\general</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Planning ver1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Ship_imp.hpp">
+      <Filter>Header Source Files\game</Filter>
+    </None>
+  </ItemGroup>
+</Project>

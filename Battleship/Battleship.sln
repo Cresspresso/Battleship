@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2011
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Battleship", "Battleship\Battleship.vcxproj", "{DA41CB03-7F29-4692-80C9-C41541F6AAFD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Consolate", "Consolate\Consolate.vcxproj", "{1F0F76BC-85F2-4519-B447-B151C80E1C4D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConsolateTests", "ConsolateTests\ConsolateTests.vcxproj", "{62100F62-7359-4614-8992-3117B0A36284}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{34594533-F9E7-4BB0-BC35-EECEACA98E91}"
+	ProjectSection(SolutionItems) = preProject
+		CodingStandard.txt = CodingStandard.txt
+		FileFormat.txt = FileFormat.txt
+		README.txt = README.txt
+		Todo.txt = Todo.txt
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BattleshipTests", "BattleshipTests\BattleshipTests.vcxproj", "{653F421D-EF9B-4969-91A4-C3D4B868F6E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA41CB03-7F29-4692-80C9-C41541F6AAFD}.Debug|x64.ActiveCfg = Debug|x64
+		{DA41CB03-7F29-4692-80C9-C41541F6AAFD}.Debug|x64.Build.0 = Debug|x64
+		{DA41CB03-7F29-4692-80C9-C41541F6AAFD}.Debug|x86.ActiveCfg = Debug|Win32
+		{DA41CB03-7F29-4692-80C9-C41541F6AAFD}.Debug|x86.Build.0 = Debug|Win32
+		{DA41CB03-7F29-4692-80C9-C41541F6AAFD}.Release|x64.ActiveCfg = Release|x64
+		{DA41CB03-7F29-4692-80C9-C41541F6AAFD}.Release|x64.Build.0 = Release|x64
+		{DA41CB03-7F29-4692-80C9-C41541F6AAFD}.Release|x86.ActiveCfg = Release|Win32
+		{DA41CB03-7F29-4692-80C9-C41541F6AAFD}.Release|x86.Build.0 = Release|Win32
+		{1F0F76BC-85F2-4519-B447-B151C80E1C4D}.Debug|x64.ActiveCfg = Debug|x64
+		{1F0F76BC-85F2-4519-B447-B151C80E1C4D}.Debug|x64.Build.0 = Debug|x64
+		{1F0F76BC-85F2-4519-B447-B151C80E1C4D}.Debug|x86.ActiveCfg = Debug|Win32
+		{1F0F76BC-85F2-4519-B447-B151C80E1C4D}.Debug|x86.Build.0 = Debug|Win32
+		{1F0F76BC-85F2-4519-B447-B151C80E1C4D}.Release|x64.ActiveCfg = Release|x64
+		{1F0F76BC-85F2-4519-B447-B151C80E1C4D}.Release|x64.Build.0 = Release|x64
+		{1F0F76BC-85F2-4519-B447-B151C80E1C4D}.Release|x86.ActiveCfg = Release|Win32
+		{1F0F76BC-85F2-4519-B447-B151C80E1C4D}.Release|x86.Build.0 = Release|Win32
+		{62100F62-7359-4614-8992-3117B0A36284}.Debug|x64.ActiveCfg = Debug|x64
+		{62100F62-7359-4614-8992-3117B0A36284}.Debug|x64.Build.0 = Debug|x64
+		{62100F62-7359-4614-8992-3117B0A36284}.Debug|x86.ActiveCfg = Debug|Win32
+		{62100F62-7359-4614-8992-3117B0A36284}.Debug|x86.Build.0 = Debug|Win32
+		{62100F62-7359-4614-8992-3117B0A36284}.Release|x64.ActiveCfg = Release|x64
+		{62100F62-7359-4614-8992-3117B0A36284}.Release|x64.Build.0 = Release|x64
+		{62100F62-7359-4614-8992-3117B0A36284}.Release|x86.ActiveCfg = Release|Win32
+		{62100F62-7359-4614-8992-3117B0A36284}.Release|x86.Build.0 = Release|Win32
+		{653F421D-EF9B-4969-91A4-C3D4B868F6E4}.Debug|x64.ActiveCfg = Debug|x64
+		{653F421D-EF9B-4969-91A4-C3D4B868F6E4}.Debug|x64.Build.0 = Debug|x64
+		{653F421D-EF9B-4969-91A4-C3D4B868F6E4}.Debug|x86.ActiveCfg = Debug|Win32
+		{653F421D-EF9B-4969-91A4-C3D4B868F6E4}.Debug|x86.Build.0 = Debug|Win32
+		{653F421D-EF9B-4969-91A4-C3D4B868F6E4}.Release|x64.ActiveCfg = Release|x64
+		{653F421D-EF9B-4969-91A4-C3D4B868F6E4}.Release|x64.Build.0 = Release|x64
+		{653F421D-EF9B-4969-91A4-C3D4B868F6E4}.Release|x86.ActiveCfg = Release|Win32
+		{653F421D-EF9B-4969-91A4-C3D4B868F6E4}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A8474D81-59A5-4AD9-B414-990013336ED8}
+	EndGlobalSection
+EndGlobal

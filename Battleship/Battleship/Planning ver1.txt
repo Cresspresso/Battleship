@@ -1,0 +1,112 @@
+=== Classes ===
+
+class Collider:
+	Ship& actor
+	List<COORD> localCells
+
+	bool Overlaps(Collider& other)
+
+class Ship:
+	string name
+	COORD position
+	List<Collider> colliders
+	int activeColliderIndex
+	List<HealthState> colliderCellHealths
+
+	bool Overlaps(Ship& other)
+
+enum HealthState:
+	Normal
+	Hit
+
+class BoardCell:
+	Ship* ship
+	int shipColliderCellIndex
+	bool hasBeenShot
+
+class Player:
+	List<Ship> ships
+	List2D<BoardCell> board
+
+
+
+=== Input ===
+
+Axes:
+"Horizontal":
+	Left-
+	Right+
+	A-
+	D+
+"Vertical":
+	Up-
+	Down+
+	W-
+	S+
+
+Actions:
+"Primary": Enter
+"Secondary": Space
+"Cancel": Escape
+
+
+
+=== UI Views ===
+
+--- Default KeyCodes when Focused ---
+
+Element: KeyCodes W/S/Up/Down to navigate vertical elements.
+Button: KeyCode ENTER to press.
+Toggle: KeyCode ENTER to toggle value.
+Slider: KeyCodes Left/Right/A/D to increment/decrement value.
+BoardPanel: KeyCodes Up/Down/Left/Right / W/A/S/D to move cursor.
+
+
+--- Views ---
+
+View "Main Menu":
+	ViewButton "Play" -> "Place Ships"
+	ViewButton "Settings"
+	Toggle "Debug Mode"
+
+View "Settings":
+	Slider "Board Width" [max Ship Length .. 20]
+	Slider "Board Height" [max Ship Length .. 20]
+	Button "Reset to Default"
+	Button "Apply"
+	ViewButton "Back" -> "Main Menu" // KeyCode ESC
+
+View "Place Ships":
+	OverlayPanel "Pause Menu"
+	BoardPanel "Ships Board"
+		// KeyCode E to change Ship activeColliderIndex.
+		// KeyCode ENTER to place ship or pick up ship.
+	Panel "Unplaced Ships"
+		// KeyCode E to change Ship activeColliderIndex.
+		// KeyCode ENTER to place ship or pick up ship.
+
+	Button "Random"
+		// places your ships randomly on the board.
+	Button "Clear"
+		// removes all placed ships from the board.
+	ViewButton "Done" -> "Game"
+	ViewButton "Quit" -> "Main Menu"
+		// only interactable when all ships have been placed.
+
+View "Game":
+	OverlayPanel "Pause Menu"
+	Panel "Ships Board"
+		// KeyCode ENTER to fire at position.
+	Panel "Shots Board"
+	// if DebugMode is true:
+	Panel "Enemy Ships Board"
+	Panel "Enemy Shots Board"
+	// endif
+
+View "Outcome":
+	Label // Victory or Defeat.
+	ViewButton "Done" -> "Main Menu" // KeyCode ESC
+
+OverlayPanel "Pause Menu": // KeyCode ESC toggles visibility.
+	Label "Paused"
+	ViewButton "Quit" -> "Main Menu"
