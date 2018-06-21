@@ -44,7 +44,7 @@ If a cell is bright red, it means a ship has been hit.
 Symbol		|	Meaning
 --- | ---
 ~			|	Unknown cell that has not been fired at, OR Empty ocean cell.
--			|	Empty ocean cell, which has been fired at.
+`-`			|	Empty ocean cell, which has been fired at.
 X			|	An unknown ship has been hit in that cell.
 
 ### Ships
